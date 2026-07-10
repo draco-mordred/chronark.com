@@ -34,9 +34,9 @@ export default async function ProjectsPage() {
   const top2 = allProjects.find((project) => project.slug === "planetfall")!;
   const top3 = allProjects.find((project) => project.slug === "highstorm")!;
   const topOverrides: Record<string, { title?: string; external?: string }> = {
-    unkey: { title: "medlogacademy.com", external: "https://medlogacademy.com" },
-    planetfall: { title: "Luna Music player (lunamusic.com)", external: "https://lunamusic.com" },
-    highstorm: { title: "hospitalmanagement.app", external: "https://hospitalmanagement.app" },
+    unkey: { title: "MedLog LMS", external: "https://medloglms.vercel.app" },
+    planetfall: { title: "Luna: a music player", external: "https://luna.vercel.app" },
+    highstorm: { title: "Health Care manager", external: "https://hospital.vercel.app" },
   };
   const sorted = allProjects
     .filter((p) => p.published)
@@ -106,6 +106,9 @@ export default async function ProjectsPage() {
                     {featured.description}
                   </p>
                   <div className="absolute bottom-4 md:bottom-8">
+                  <div>
+                    something here...
+                  </div>
                     <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
                       Read more <span aria-hidden="true">→</span>
                     </p>
