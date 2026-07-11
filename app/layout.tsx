@@ -6,19 +6,19 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "Avalon Enterprises",
+    template: "%s | Avalon Enterprises",
   },
-  description: "Co-founder of unkey.com",
+  description: "Avalon Enterprises - Portfolio & Projects", // Kontora Black  Madani Arabic Semi Bold
   openGraph: {
-    title: "chronark.com",
+    title: "Avalon Enterprises",
     description:
-      "Co-founder of unkey.com",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+      "Avalon Enterprises - Portfolio & Projects",
+    url: "https://defaultfolio.com", //"https://chronark.com",
+    siteName: "Avalon Enterprises",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "/public/og-avalon-enterprises.png", //"https://chronark.com/og.png",
         width: 1920,
         height: 1080,
       },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "Avalon Enterprises",
     card: "summary_large_image",
   },
   icons: {

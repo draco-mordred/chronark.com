@@ -9,35 +9,58 @@ const navigation = [
 ];
 
 export default function Home() {
-  return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
-      <nav className="my-16 animate-fade-in">
-        <ul className="flex items-center justify-center gap-4">
-          {navigation.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
-            >
-              {item.name}
-            </Link>
-          ))}
-        </ul>
-      </nav>
-      <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-      <Particles
-        className="absolute inset-0 -z-10 animate-fade-in"
-        quantity={100}
-      />
-      <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
-        Avalon Enterprises
-      </h1>
+  const year = new Date().getFullYear();
 
-      <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-      <div className="my-16 text-center animate-fade-in">
-        <h2 className="text-sm text-zinc-500 ">Welcome to my port folio</h2>
-      </div>
+  return (
+    <div className="flex min-h-screen flex-col justify-between w-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+      <main className="flex-1 flex flex-col items-center justify-center px-6">
+        <nav className="my-16 animate-fade-in">
+          <ul className="flex items-center justify-center gap-4">
+            {navigation.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </ul>
+        </nav>
+        <div className="hidden w-full h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+        <Particles
+          className="absolute inset-0 -z-10 animate-fade-in"
+          quantity={100}
+        />
+        <div className="mb-8 animate-fade-in">
+          {/* Logo placeholder - add your logo image here */}
+          <div className="w-24 h-24 mx-auto rounded-lg border border-zinc-700 bg-zinc-900/50 flex items-center justify-center">
+            <span className="text-zinc-500 text-sm">Logo</span>
+          </div>
+        </div>
+        <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+          Avalon Enterprises
+        </h1>
+
+        <div className="hidden w-full h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+        <div className="my-16 text-center animate-fade-in">
+          <h2 className="text-sm text-zinc-500 ">Welcome to my port folio</h2>
+        </div>
+      </main>
+
+      <footer className="w-full border-t border-zinc-800 bg-black/90 px-6 py-6 text-center text-sm text-zinc-500 animate-fade-in">
+        <div className="mx-auto flex flex-wrap items-center justify-center gap-6 max-w-3xl">
+          <span className="transition duration-300 ease-out hover:text-white hover:-translate-y-0.5 hover:scale-105">
+            © {year} Avalon Enterprises
+          </span>
+          <Link
+            href="#policy"
+            className="transition duration-300 ease-out hover:text-white hover:-translate-y-0.5 hover:scale-105"
+          >
+            Policy
+          </Link>
+        </div>
+      </footer>
     </div>
   );
-
 }
